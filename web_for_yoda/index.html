@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR YODA君</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff4d4d;
+            font-size: 2.5em;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 50%;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1em;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e60000;
+        }
+
+        #response {
+            margin-top: 20px;
+            font-size: 1.3em;
+            color: #d63384;
+        }
+
+        .heart {
+            font-size: 3em;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>HAII YODA KU SAYAANGG ❤️</h1>
+    <p>Aku buat ini khusus untuk kamu, yang paling aku sayangg 😘</p>
+    <img src="img/yoda.jpg" alt="Foto Kita">
+
+    <br><br>
+    <button onclick="sayLove()">Klik aku!!😡</button>
+    <div id="response"></div>
+
+    <br><br>
+    <div class="heart">💖</div>
+
+    <script>
+        function sayLove() {
+            const messages = [
+                "Aku sayang bangett sama kamuu 💕",
+                "Makasii udah selalu denger yapping an kuu 😍",
+                "Selalu dc sama akuu tiap malemm 💗",
+                "MWAHH 😘",
+                "I LOVE YOU JODHA ALVINO SANGER🤍"
+            ];
+            const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById("response").innerText = randomMsg;
+        }
+    </script>
+</body>
+</html>
